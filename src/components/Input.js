@@ -5,21 +5,24 @@ import { useDispatch } from 'react-redux';
 import { saveTodo } from '../features/todoSlice';
 function Input() {
 
-    const {input, setInput} = useState('');
+    const [input, setInput] = useState('');
     const dispatch = useDispatch()
-    const addTodo = () => {
-        console.log(`${input}`)
 
+    const addTodo = () => {
+        console.log(`adding ${input}`)
+        debugger
         dispatch(saveTodo({
             item: input,
             done: false,
             id: Date.now()
         }))
+        debugger
+        console.log(`${input}`)
     }
 
     return (
         <div className='input'>
-            <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
+            <input type="text" value={input} onChange={e => setInput(e.target.value)}/>
             <button onClick={addTodo}>Add</button>
         </div>
     )

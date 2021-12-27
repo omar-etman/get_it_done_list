@@ -4,24 +4,20 @@ import Input from './components/Input';
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 
-const todoList = [{
-  item: 'todo',
-  done: false,
-  id: 87645538299
-}, {
-  item: 'todo2',
-  done: true,
-  id: 766525673892
-}]
+import { useSelector } from 'react-redux';
+import { selectTodoList } from './features/todoSlice';
+
 function App() {
+  const todoList = useSelector(selectTodoList)
   return (
     <div className="App">
-      <Header/>
       <div className="app__container">
+        <Header/>
         <div className="app__todoContainer">
             {
               todoList.map(item => (
                 <TodoItem
+                  key={item.id}
                   name={item.item}
                   done={item.done}
                   id={item.id}
