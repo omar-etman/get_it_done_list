@@ -3,6 +3,7 @@ import { Checkbox } from '@material-ui/core'
 import './TodoItem.css'
 import { useDispatch } from 'react-redux'
 import { setCheck } from '../features/todoSlice'
+
 function TodoItem({name, done, id}) {
     const dispatch = useDispatch()
     const handleCheck = () => {
@@ -17,7 +18,9 @@ function TodoItem({name, done, id}) {
                 inputProps={{'aria-label': 'secondary checkbox'}}
             />
             <p className={done && 'todoItem--done'}>{name}</p>
-            <button>delete</button>
+            <button>
+                <span>delete</span>
+            </button>
             <button>edit</button>
             <button>details</button>
 

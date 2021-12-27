@@ -25,6 +25,10 @@ const todoSlice = createSlice({
                     }
                 }
             })
+        },
+
+        setPriority: (state, action) => {
+            
         }
     }
 });

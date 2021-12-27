@@ -1,6 +1,6 @@
 .header__container{
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     background-color: #202831;
@@ -9,15 +9,26 @@
     min-height: 15%
 }
 
+.header__container__logo{
+    display: block;
+    margin-right: 0.5em;
+    height: 65%;
+}
+
+.header__container__title{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 h1{
-    font-size: 1.5em;
-    font-weight: bolder;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 1.7em;
+    font-weight: lighter;
 }
 
 h2{
     font-size: 1em;
     color: #94b8e0;
-    font-weight: lighter;
     
    
 }
