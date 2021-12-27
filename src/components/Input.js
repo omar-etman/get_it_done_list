@@ -11,7 +11,7 @@ function Input() {
     return (
         <div className='input'>
             <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
-            <button onClick={addTodo}>add one</button>
+            <button onClick={addTodo}>Add</button>
         </div>
     )
 }
