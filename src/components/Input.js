@@ -3,9 +3,11 @@ import './Input.css'
 
 import { useDispatch } from 'react-redux';
 import { saveTodo } from '../features/todoSlice';
-function Input() {
+function Input(props) {
 
     const [input, setInput] = useState('');
+    const [priority, setPriority] = useState('');
+    const [taskStatus, setTaskStatus] = useState('');
     const dispatch = useDispatch()
 
     const addTodo = () => {
@@ -14,16 +16,19 @@ function Input() {
         dispatch(saveTodo({
             item: input,
             done: false,
-            id: Date.now()
+            id: Date.now(),
+            priority: priority,
+            taskStatus: taskStatus,
         }))
+        setInput('')
         debugger
-        console.log(`${input}`)
+        console.log(input)
     }
 
     return (
         <div className='input'>
             <input type="text" value={input} onChange={e => setInput(e.target.value)}/>
-            <button onClick={addTodo}>Add</button>
+            <button className='input__button' onClick={addTodo}>Add</button>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Input from './components/Input';
 import Header from './components/Header';
@@ -9,6 +9,7 @@ import { selectTodoList } from './features/todoSlice';
 
 function App() {
   const todoList = useSelector(selectTodoList)
+
   return (
     <div className="App">
       <div className="app__container">
@@ -20,6 +21,8 @@ function App() {
                   key={item.id}
                   name={item.item}
                   done={item.done}
+                  priority={item.priority}
+                  taskStatus={item.taskStatus}
                   id={item.id}
                 />
               ))

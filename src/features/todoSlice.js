@@ -11,6 +11,7 @@ const todoSlice = createSlice({
     reducers: {
         saveTodo: (state, action) => {
             state.todoList.push(action.payload)
+            debugger
         },
         deleteTodo: (state, action) => {
             state.todoList.pop(action.payload)
@@ -25,10 +26,16 @@ const todoSlice = createSlice({
                     }
                 }
             })
-        },
+        // }, editTodo: (state, action) => {
+        //     if (action.payload === item.id) {
+        //         function edit(prop, menu){
+                    
 
-        setPriority: (state, action) => {
-            
+        //             return itemPrice;
+        //         }
+        //     }
+        // }
+
         }
     }
 });

@@ -9,6 +9,7 @@ function Header() {
                 <h1>Get It Done!</h1>
                 <h2>taskmanaging todo's list</h2>
             </div>
+            
         </div>
     )
 }

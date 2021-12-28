@@ -1,19 +1,59 @@
 .todoItem{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
-    width: 80%;
+    justify-content: space-between;
+    width: 98%;
     margin: 6px 4px;
     height: 40px;
     border-radius: 12px;
-    background-color: #2B3743;
+    background-color: #2d3946;
     border: 3px solid white;
+    height: 25%;
+}
+
+.checkbox__container{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.todo{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .todoItem>p{
-    flex: 1;
+    /* flex: 1; */
+    border: 2px dotted white;
+    width: 60%;
+    
 }
 
 .todoItem--done{
     text-decoration: line-through;
+}
+
+.button__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 2px solid red;
+    height: 100%;
+    margin-right: 1em;
+}
+
+.todo__button{
+    margin: 0 0 0 0.5em;
+    padding: 0;
+    width: 4em;
+    background-color:#202831;
+}
+
+.todo__button__icon{
+    color: white;
 }
