@@ -6,13 +6,13 @@
     background-color: #202831;
     width: 100%;
     margin-bottom: 2em;
-    min-height: 15%
+    min-height: 100px;
 }
 
 .header__container__logo{
     display: block;
     margin-right: 0.5em;
-    height: 65%;
+    width: 70px;
 }
 
 .header__container__title{

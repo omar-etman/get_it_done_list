@@ -40,12 +40,6 @@ function TodoItem(props) {
                     </div>
                     <div className='button__container'>
                         <button className='todo__button' onClick={removeTodo}>Delete</button >
-                        <button 
-                            className='todo__button'
-                            // onClick={}
-                        >
-                            Edit
-                        </button>
                     </div>
                 </div>
             </div>

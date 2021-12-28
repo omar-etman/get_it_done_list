@@ -1,5 +1,7 @@
 .date-picker{
     margin: 1em 0;
-    border: 2px solid green;
     width: 100%;
+    background-color: #202831;
+    padding: 0.5em;
+    border-radius: 12px;
 }
