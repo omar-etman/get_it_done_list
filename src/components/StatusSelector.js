@@ -1,6 +1,4 @@
-import { MenuItem, Select, FormControl } from "@material-ui/core";
 import React, { useState } from "react";
-import styled from 'styled-components';
 import './Selector.css'
 const StatusSelector = (props) => {
 

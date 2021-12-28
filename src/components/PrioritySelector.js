@@ -1,4 +1,3 @@
-import { MenuItem, Select, FormControl, InputLabel, } from "@material-ui/core";
 import React, { useState } from "react";
 import './Selector.css'
 const PrioritySelector = (props) => {

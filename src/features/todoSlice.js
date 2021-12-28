@@ -11,10 +11,10 @@ const todoSlice = createSlice({
     reducers: {
         saveTodo: (state, action) => {
             state.todoList.push(action.payload)
-            debugger
         },
         deleteTodo: (state, action) => {
-            state.todoList.pop(action.payload)
+            state.todoList = state.todoList.filter((todo) => todo.id !== action.payload.id)
+            
         },
         setCheck: (state, action) => {
             state.todoList.map(item => {
@@ -27,20 +27,17 @@ const todoSlice = createSlice({
                 }
             })
         // }, editTodo: (state, action) => {
-        //     if (action.payload === item.id) {
-        //         function edit(prop, menu){
-                    
-
-        //             return itemPrice;
+        //             {...state, }
         //         }
         //     }
         // }
 
+        // }
         }
     }
 });
 
-export const { saveTodo, setCheck } = todoSlice.actions
+export const { saveTodo, setCheck, deleteTodo } = todoSlice.actions
 
 export const selectTodoList = state => state.todos.todoList
 

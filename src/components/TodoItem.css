@@ -19,13 +19,24 @@
 
 .todo{
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.todo__info{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.todo__details{
+    display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;
 }
 
 .todoItem>h3{
-    /* flex: 1; */
     border: 2px dotted white;
     width: 60%;
     font-family: bold;
@@ -63,4 +74,14 @@
 
 .todo__button__icon{
     color: white;
+}
+
+.datePicker{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 13%;
+    height: 100%;
+    padding: 1em;
 }
