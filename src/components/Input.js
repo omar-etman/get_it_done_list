@@ -9,25 +9,20 @@ function Input(props) {
     const [priority, setPriority] = useState('');
     const [taskStatus, setTaskStatus] = useState('');
     const [description, setDescription] = useState('add further details to your task.');
-    const {detailedView} = props;
+    const [dueDate, setDueDate] = useState(new Date())
     const dispatch = useDispatch()
 
     const addTodo = () => {
-        console.log(`adding ${input}`)
-        debugger
         dispatch(saveTodo({
-            item: input,
+            input,
             done: false,
             id: Date.now(),
-            priority: priority,
-            taskStatus: taskStatus,
-            description: description,
-            detailedView: detailedView,
-            setDescription:setDescription
+            priority,
+            taskStatus,
+            description,
+            dueDate
         }))
         setInput('')
-        debugger
-        console.log(input)
     }
 
     return (

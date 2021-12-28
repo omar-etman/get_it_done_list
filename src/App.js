@@ -9,7 +9,6 @@ import { selectTodoList } from './features/todoSlice';
 
 function App() {
   const todoList = useSelector(selectTodoList)
-  const [detailedView, setDetailedView] = useState(false)
 
   return (
     <div className="App">
@@ -20,22 +19,18 @@ function App() {
               todoList.map(item => (
                 <TodoItem
                   key={item.id}
-                  name={item.item}
+                  name={item.input}
                   done={item.done}
                   priority={item.priority}
                   taskStatus={item.taskStatus}
                   id={item.id}
                   description={item.description}
-                  setDetailedView={setDetailedView}
-                  setDescription={item.setDescription}
-                  detailedView={item.detailedView}
+                  dueDate={item.dueDate}
                 />
               ))
             }
         </div>
-        <Input 
-          detailedView={detailedView}
-        />
+        <Input/>
       </div>
     </div>
   );

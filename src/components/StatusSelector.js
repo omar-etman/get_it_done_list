@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import './Selector.css'
 const StatusSelector = (props) => {
 
-  const {taskStatus, statusSelector} = props
-  const handleChange = (event) => {
-    statusSelector(event.target.value)
+  const {taskStatus, editorFunction} = props
+  const handleChange = (value) => {
+    editorFunction('taskStatus', value)
   }
   return (
     <select

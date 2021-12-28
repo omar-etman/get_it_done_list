@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import './Selector.css'
 const PrioritySelector = (props) => {
   
-  const {prioritySelector, priority} = props
-  const handleChange = (event) => {
-    prioritySelector(event.target.value)
+  const { priority, editorFunction} = props
+  const handleChange = (value) => {
+    editorFunction('priority', value)
   }
   
   return (

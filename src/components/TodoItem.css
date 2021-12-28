@@ -9,6 +9,7 @@
     background-color: #2d3946;
     border: 3px solid white;
     height: 45%;
+    min-height: 150px;
 }
 
 .checkbox__container{

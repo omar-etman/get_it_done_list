@@ -18,26 +18,20 @@ const todoSlice = createSlice({
         },
         setCheck: (state, action) => {
             state.todoList.map(item => {
-                if (action.payload === item.id) {
-                    if (item.done ===true) {
-                        item.done = false
-                    } else{
-                        item.done =true
-                    }
+                if (action.payload === item.id) item.done = !item.done
+            })
+        }, 
+        editTodo: (state, action) => {
+            state.todoList.map(item => {
+                if (action.payload.id === item.id){
+                    item[action.payload.fieldKey]=action.payload.fieldValue
                 }
             })
-        // }, editTodo: (state, action) => {
-        //             {...state, }
-        //         }
-        //     }
-        // }
-
-        // }
         }
     }
 });
 
-export const { saveTodo, setCheck, deleteTodo } = todoSlice.actions
+export const { saveTodo, setCheck, deleteTodo, editTodo } = todoSlice.actions
 
 export const selectTodoList = state => state.todos.todoList
 
