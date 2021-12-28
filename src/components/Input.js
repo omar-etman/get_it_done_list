@@ -8,6 +8,7 @@ function Input(props) {
     const [input, setInput] = useState('');
     const [priority, setPriority] = useState('');
     const [taskStatus, setTaskStatus] = useState('');
+    const [description, setdescription] = useState('add further details to your task.');
     const dispatch = useDispatch()
 
     const addTodo = () => {
@@ -19,6 +20,7 @@ function Input(props) {
             id: Date.now(),
             priority: priority,
             taskStatus: taskStatus,
+            description: description
         }))
         setInput('')
         debugger

@@ -24,6 +24,7 @@ function App() {
                   priority={item.priority}
                   taskStatus={item.taskStatus}
                   id={item.id}
+                  description={item.description}
                 />
               ))
             }

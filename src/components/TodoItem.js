@@ -23,13 +23,10 @@ function TodoItem(props) {
                 />
             </div>
             <div className="todo">
-                <p className={done && 'todoItem--done'}>{name}</p>
+                <h3 className={done && 'todoItem--done'}>{name}</h3>
+                <p className='todoitem__description'>{description}</p>
                 <div className='button__container'>
-                    <button className='todo__button'>
-                        <span>
-                        <ion-icon name="close-circle"></ion-icon>
-                        </span>
-                    </button >
+                    <button className='todo__button'>delete</button >
                     <button className='todo__button'>details</button>
                 </div>
             </div>

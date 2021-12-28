@@ -17,19 +17,13 @@
     height: 100%;
 }
 
-.MuiSelect-select{
-    object-fit: fill;
-    width: 3em;
-    height: 5em;
-    color: white;
-    font-size: 0.5em;
-    
-}
-
 select{
     background-color: #202831;
     border: none;
     color: white;
-    height: 69%;
+    height: 48%;
+    max-height: 48%;
     width: 100%;
+    border-radius: 12px;
+    padding-left: 0.2em;
 }
